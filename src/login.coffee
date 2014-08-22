@@ -4,15 +4,16 @@ _       = require './lodash-wrapper'
 exports._makeLogin = (options, callback) ->
   username = _.delete options, 'username'
   password = _.delete options, 'password'
-  @request = request.defaults options
-  @login username, password, (err, response, body) =>
-    options.headers.Authorization = @_getAuthHeader(body.api_key)
-    @request = request.defaults options
+  @_request = request.defaults options
+  @login username, password, (err, body) =>
+    if err == null
+      @_makeAuth body.api_key, options
     callback(err, this) if callback?
 
 exports.login = (username, password, callback) ->
-  @_sendRequest
-    url: '/login'
+  @request
+    path: '/login'
     method: 'post'
+    expects: 200
     qs: { username: username, password: password }
   , callback
