@@ -11,11 +11,9 @@ class HerokuApi
     options = _.extend options, defaults.options, { headers: headers }
     @url = "#{options.scheme}://#{options.host}"
     if options.apiKey?
-      @_makeAuth apiKey, options
+      @_makeAuth options.apiKey, options
     else if options.username? && options.password?
       @_makeLogin options, callback
-    else
-      throw new Exception("You need to give username/password or apiKey.")
 
   _makeAuth: (apiKey, options) ->
     signature = new Buffer(":#{apiKey}").toString('base64').replace('\n', '')
