@@ -1,6 +1,6 @@
 {
   "name": "heroku-legacy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Heroku legacy API client for NodeJS",
   "main": "lib/heroku-api.js",
   "scripts": {

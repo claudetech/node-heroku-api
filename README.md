@@ -2,6 +2,14 @@
 
 Port of [heroku-api gem](https://github.com/heroku/heroku.rb) to NodeJS.
 
+## Installation
+
+```sh
+$ npm install heroku-legacy
+```
+
+## Usage
+
 The API is exactly the same, with the following differences:
 
 * All the methods take a callback of the following form: `function (err, body)`
@@ -16,6 +24,7 @@ Here is a short example (in CoffeeScript).
 With username/password:
 
 ```coffee
+HerokuApi = require 'heroku-legacy'
 new HerokuApi username: 'test@foo.jp', password: 'password', (err, api) ->
   return handleError(err) unless err == null
   api.getApps (err, apps) ->
@@ -26,6 +35,7 @@ new HerokuApi username: 'test@foo.jp', password: 'password', (err, api) ->
 With API key:
 
 ```coffee
+HerokuApi = require 'heroku-legacy'
 api = new HerokuApi apiKey: 'my-api-key'
 api.getApps (err, apps) ->
   return handleError(err) unless err == null
