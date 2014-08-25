@@ -1,5 +1,5 @@
 # GET /apps/:app/attachments
-exports.get_attachments = (app, callback) ->
+exports.getAttachments = (app, callback) ->
   @request
     expects: 200
     method: 'get'
