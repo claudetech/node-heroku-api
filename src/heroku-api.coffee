@@ -16,6 +16,7 @@ class HerokuApi
       @_makeLogin options, callback
 
   _makeAuth: (apiKey, options) ->
+    @_apiKey = apiKey
     signature = new Buffer(":#{apiKey}").toString('base64').replace('\n', '')
     "Basic #{signature}"
     options.headers.Authorization = signature
