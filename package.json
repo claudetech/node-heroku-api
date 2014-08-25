@@ -1,6 +1,6 @@
 {
   "name": "heroku-legacy",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Heroku legacy API client for NodeJS",
   "main": "lib/heroku-api.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/claudetech/node-heroku-api.git"
+    "url": "https://github.com/claudetech/node-heroku-legacy.git"
   },
   "keywords": [
     "git"
@@ -16,9 +16,9 @@
   "author": "Daniel Perez",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/claudetech/node-heroku-api/issues"
+    "url": "https://github.com/claudetech/node-heroku-legacy/issues"
   },
-  "homepage": "https://github.com/claudetech/node-heroku-api",
+  "homepage": "https://github.com/claudetech/node-heroku-legacy",
   "devDependencies": {
     "coffee-script": "^1.7.1",
     "expect.js": "^0.3.1",
