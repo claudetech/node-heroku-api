@@ -1,3 +1,5 @@
+_ = require 'lodash'
+
 # DELETE /apps/:app
 exports.deleteApp = (app, callback) ->
   @request
