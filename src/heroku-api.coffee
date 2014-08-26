@@ -34,7 +34,7 @@ class HerokuApi
       else
         callback null, body, response
 
-  _wrapParamKeys = (params, wrapper) ->
+  _wrapParamKeys: (params, wrapper) ->
     newParams = {}
     _.each params, (value, key) ->
       newParams["#{wrapper}[#{key}]"] = value
